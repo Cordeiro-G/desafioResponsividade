@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*reset do rem*/
+    font-size: 62.5%;
+    
+    /* cores referentes a sabores de sorvete ^~^*/
+    --mirtilo:#4A4E69;
+    --bubaloo:#8E9AAF;
+    --blue-ice:#CBC0D3;
+    --creme:#CBC0D3;
+    --leite-condensado:#EFF1FF;
+    --ninho: #FEEAFA;
+    --coco:#ffffff;
+    --uva: #23053A;
+    --vinho:#70148a;
+    --morango: #dc1b3b;
+    
+    /*fontes*/
+    --texto: 'Palanquin', sans-serif;
+    --header-e-h2: 'Staatliches', cursive;
+    
+    /*mobile*/
+    --fs-header-mobile: 4rem;
+    --fs-cards-header-mobile: 3.4rem;
+    --fs-text-small-mobile:2rem;
+   
+}
+body{
+    background-color: var(--leite-condensado);
+   
+}
+.app{
+    max-width: 33rem;
+    margin: 0 auto;
+    animation-name: catapimbas;
+    animation-duration: 2.5s;
+    padding-inline: 1.5rem;
+}
+.app header{ 
+    display: flex;
+    flex-direction: column;
+    gap: 3.7rem;
+    text-align: center;
+    background-color: var(--bubaloo);
+
+    margin: 10rem 0 8rem;
+
+}
+span{
+    color: var(--morango);
+    font-weight: bold;
+}
+p{
+    font-family: var(--texto);
+    color: var(--uva) ;
+    font-size: 2rem;
+}
+
+h1{
+    font-family: var(--header-e-h2);
+    font-size: var(--fs-header-mobile);
+    color: var(--coco);
+    
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.card h2{
+    position: absolute;
+    font-family: var(--header-e-h2);
+    bottom: 26.2rem;
+    left: 5rem;
+    font-size: var(--fs-text-small-mobile);
+    font-weight: 800;
+    color: var(--mirtilo);
+    display: flex;
+    flex-direction: column;
+    gap: 2.3rem;
+    line-height: 3.2rem;
+    background-color: var(--ninho);
+    padding: 0 1.6rem;
+    border-radius: 2rem;
+    opacity: 0.9;
+   
+}
+
+
+.card{
+    position: relative;
+    border-radius: 1.3rem;
+    
+    
+    
+}
+.card:hover, 
+.card h2:hover{
+    opacity: 1;
+    scale: 0.9;
+}
+.card img {
+    height: 41.6rem;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+strong{
+    color: var(--vinho);
+}
+@keyframes catapimbas{
+    0%{
+        opacity: 0;
+        transform: translateY(-100rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    @media (min-width: 700px){
+        :root{
+             /*Desktop*/
+    --fs-header-desktop:6.4rem;
+    --fs-cars-header-desktop: 2rem;
+    --fs-text-big-desktop:3.2rem;
+        }
+        .app{
+            max-width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+        .app header{
+            margin: 0;
+            font-size: var(--fs-header-desktop);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .app header img{
+            object-fit: cover;
+           max-width: 50%;
+        }
+        main{
+            width: 100%;
+           
+        }
+        .card h2{
+            font-size: var(--fs-cars-header-desktop);
+            bottom: 23.2rem;
+            left: 4rem;
+            width: max-content;
+            
+        }
+        h1{
+            font-size: var(--fs-header-desktop);
+        }
+        .container{
+            display: grid;
+            grid-template: "A A A B B" "C C  D D D";
+            gap: 3.2rem;
+        }
+        .container div:nth-child(1){
+            grid-area: A;
+        }
+        .container div:nth-child(2){
+            grid-area: B;
+        }
+        .container div:nth-child(3){
+            grid-area: C;
+        }
+        .container div:nth-child(4){
+            grid-area: D;
+        }
+    }
