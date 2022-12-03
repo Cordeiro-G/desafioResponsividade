@@ -8,16 +8,17 @@
     font-size: 62.5%;
     
     /* cores referentes a sabores de sorvete ^~^*/
-    --mirtilo:#4A4E69;
-    --bubaloo:#8E9AAF;
-    --blue-ice:#CBC0D3;
-    --creme:#CBC0D3;
-    --leite-condensado:#EFF1FF;
-    --ninho: #FEEAFA;
-    --coco:#ffffff;
-    --uva: #23053A;
-    --vinho:#70148a;
-    --morango: #dc1b3b;
+    --mirtilo:hsl(264, 17%, 35%);
+    --bubaloo:hsl(218, 17%, 62%);
+    --blue-ice:hsl(275, 18%, 79%);
+    --creme:hsl(75, 52%, 81%);
+    --leite-condensado:hsl(233, 100%, 97%);
+    --ninho: hsl(312, 91%, 96%);
+    --coco:hsl(0, 0%, 100%);
+    --uva: hsl(274, 84%, 12%);
+    --vinho:hsl(287, 75%, 31%);
+    --morango: hsl(350, 78%, 48%);
+    --cereja: hsl(347, 86%, 17%);
     
     /*fontes*/
     --texto: 'Palanquin', sans-serif;
@@ -40,12 +41,15 @@ body{
     animation-duration: 2.5s;
     padding-inline: 1.5rem;
 }
+.app .box{
+    background-color: var(--bubaloo);
+}
 .app header{ 
     display: flex;
     flex-direction: column;
     gap: 3.7rem;
     text-align: center;
-    background-color: var(--bubaloo);
+   
 
     margin: 10rem 0 8rem;
 
@@ -140,9 +144,12 @@ strong{
     --fs-text-big-desktop:3.2rem;
         }
         .app{
-            max-width: 70%;
-            display: flex;
-            flex-direction: column;
+         
+            display:grid;
+            width: 100%;
+            max-width: 100%;
+            grid-template-columns: 40% 60%;
+            
             gap: 5rem;
         }
         .app header{
@@ -151,11 +158,25 @@ strong{
             display: flex;
             flex-direction: column;
             align-items: center;
+            background-color: var(--bubaloo);
         }
         .app header img{
             object-fit: cover;
            max-width: 50%;
         }
+        .app .box{
+            background-color: var(--bubaloo);
+        }
+        .app header p{
+            color: var(--coco);
+        }
+        .app header strong{
+            color: var(--cereja)
+        }
+        .app header span{
+            color: var(--uva);
+        }
+        
         main{
             width: 100%;
            
